@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 class ConnectToDatabase
 {
   connectToDatabase = () =>
   {
-    mongoose.connect(url, {
+    mongoose.connect(process.env.DATABASE_URL, {
       useNewUrlParser: true,
       useUndefinedTopology: true,
       useFindAndModify: false
