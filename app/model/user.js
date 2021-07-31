@@ -32,10 +32,27 @@ const schema = mongoose.model('UserSchemaModel', UserSchema);
 
 class userRegistrationAndLogin
 {
-  registerUser = () =>
+  registerUser = (userData, callback) =>
   {
+    try {
 
-  }
+      const user = new schema({
+        firstName: userData.firstName,
+        lastName: userData.lastName,
+        email: userData.email,
+        password: userData.password
+      });
+
+      user.save({}, (err, data) =>
+      {
+        return err ? callback(err, null) : callback(null, data);
+      })
+
+    } catch (err) {
+      return callback(err, null);
+    }
+
+    }
 
   loginUser = () => {
     

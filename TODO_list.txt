@@ -1,0 +1,27 @@
+1)Backend
+  -> folder structure:
+      -> server.js
+      -> .env
+      -> .gitignore
+      -> package.json
+      -> config:
+          -> bankist.js (to connect backend with database)
+      -> app:
+          -> routes:
+              -> routes.js (contains all the routes)
+          -> controller:
+              -> user.js (controller for user registration and login)
+              -> bankist.js (controller for CRUD)
+          -> service:
+              -> user.js (service layer for user registration and login)
+              -> bankist.js (service layer for CRUD)
+          -> model:
+              -> user.js (schema for user registration and login)
+              -> bankist.js (schema for CRUD)
+
+2)Frontend
+  -> folder structure:
+      -> create react app:
+          -> public
+          -> src:
+              ->
